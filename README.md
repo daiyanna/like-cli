@@ -14,4 +14,4 @@
   npm publish 发布当前项目目录下面的npm包，重新发布修改package中的version即可更新
   发布的时候注意package中的name，不能于现有的npm冲突了否则报错，dyn-likecli
   yarn global install dyn-likecli
-  likecli此为bin中定义的作为命令使用 likecli init
+  likecli此为bin中定义的作为命令使用 likecli init 会在当前命令行目录下以输入的项目名写入文件
