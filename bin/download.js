@@ -3,9 +3,9 @@ var path = require('path');
 var chalk = require('chalk');
 
 module.exports = function download(name, description) {
-    var rootPath = path.resolve(process.cwd()); //项目根目录
-    var fromPath = path.join(rootPath, 'project');
-    var toPath = path.join(rootPath, name);;
+    var fromPath = path.join(__dirname, '../project');  
+    // npm publish 以后__dirname是/node_modules/dyn-likecli/bin/project 所以这里加上../返回上一目录才能找到project
+    var toPath = path.join(process.cwd(), name); // process.cwd()获取当前命令窗口的路径
     var fileArr = [];
 
     fs.stat(toPath, function(err, stat){
